@@ -1,0 +1,65 @@
+"vim.easymotion": true,
+  "vim.sneak": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.hlsearch": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false
+  },
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<tab>"],
+      "commands": ["workbench.action.nextEditor"]
+    },
+    {
+      "before": ["<S-tab>"],
+      "commands": ["workbench.action.previousEditor"]
+    },
+    {
+      "before": ["<leader>", "c"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+    {
+    "before": ["<leader>", "e"],
+    "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    {
+      "before": [":"],
+      "commands": ["workbench.action.showCommands"]
+    },
+    {
+      "before": ["<leader>", "/"],
+      "commands": ["editor.action.commentLine"],
+      "when": "editorTextFocus && !editorReadonly"
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+    "before": [">"],
+    "commands": ["editor.action.indentLines"]
+    },
+    {
+    "before": ["<"],
+    "commands": ["editor.action.outdentLines"]
+    },
+    {
+      "before": ["<leader>", "/"],
+      "commands": ["editor.action.commentLine"],
+      "when": "editorTextFocus && !editorReadonly"
+    }
+],
+"editor.fontSize": 18,
+"editor.lineNumbers": "relative",
+"editor.lineHeight": 1.7,
+"editor.fontFamily": "'Fira Code'",
+"editor.fontLigatures": true,
+"editor.minimap.enabled": false,
+"editor.cursorSurroundingLines": 20
