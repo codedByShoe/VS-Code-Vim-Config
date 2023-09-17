@@ -1,78 +1,153 @@
 // Place your key bindings in this file to override the defaults
 [
-    {
-        "key": "ctrl+h",
-        "command": "workbench.action.navigateLeft"
-    },
-    {
-        "key": "ctrl+l",
-        "command": "workbench.action.navigateRight"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "workbench.action.navigateUp"
-    },
-    {
-        "key": "ctrl+j",
-        "command": "workbench.action.navigateDown"
-    },
-    { 
-      "key": "h",
-      "command": "list.collapse",
-      "when": "listFocus && !inputFocus"
-    },
-    { 
-      "key": "l",
-      "command": "list.expand",
-      "when": "listFocus && !inputFocus"
-    },
-    { 
-      "key": "k",
-      "command": "list.focusUp",
-      "when": "listFocus && !inputFocus"
-    },
-    { 
-      "key": "j",
-      "command": "list.focusDown",
-      "when": "listFocus && !inputFocus"
-    },
-    {
-      "key": "r",
-      "command": "renameFile",
-      "when": "explorerViewletVisible && filesExplorerFocus"
-    },
-    {
-      "key": "enter",
-      "command": "-renameFile",
-      "when": "explorerViewletVisible && filesExplorerFocus"
-    },
-    {
-      "key": "ctrl+j",
-      "command": "selectNextSuggestion",
-      "when": "suggestWidgetVisible"
-    },
-    {
+  // navigate to different splits, terminal, file explorer. etc.. whatever is open
+  {
+      "key": "ctrl+h",
+      "command": "workbench.action.navigateLeft"
+  },
+  {
+      "key": "ctrl+l",
+      "command": "workbench.action.navigateRight"
+  },
+  {
       "key": "ctrl+k",
-      "command": "selectPrevSuggestion",
-      "when": "suggestWidgetVisible"
-    },{
+      "command": "workbench.action.navigateUp"
+  },
+  {
       "key": "ctrl+j",
-      "command": "workbench.action.quickOpenSelectNext",
-      "when": "inQuickOpen"
-    },
-    {
-      "key": "ctrl+k",
-      "command": "workbench.action.quickOpenSelectPrevious",
-      "when": "inQuickOpen"
-    },
-    {
-        "key": "ctrl+i",
-        "command": "namespaceResolver.import",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+alt+i",
-        "command": "-namespaceResolver.import",
-        "when": "editorTextFocus"
-    },
-]  
+      "command": "workbench.action.navigateDown"
+  },
+  { 
+    "key": "h",
+    "command": "list.collapse",
+    "when": "listFocus && !inputFocus"
+  },
+  { 
+    "key": "l",
+    "command": "list.expand",
+    "when": "listFocus && !inputFocus"
+  },
+  { 
+    "key": "k",
+    "command": "list.focusUp",
+    "when": "listFocus && !inputFocus"
+  },
+  { 
+    "key": "j",
+    "command": "list.focusDown",
+    "when": "listFocus && !inputFocus"
+  },
+  // file explorer navigation & file management
+  {
+    "key": "r",
+    "command": "renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "enter",
+    "command": "-renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "a",
+    "command": "explorer.newFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "enter",
+    "command": "-explorer.newFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "c",
+    "command": "filesExplorer.cut",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "enter",
+    "command": "-filesExplorer.cut",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "p",
+    "command": "filesExplorer.paste",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "enter",
+    "command": "-filesExplorer.paste",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "d",
+    "command": "deleteFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "j",
+    "command": "list.focusDown",
+    "when": "listFocus && explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "k",
+    "command": "list.focusUp",
+    "when": "listFocus && explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  // code suggestion navigation
+  {
+    "key": "ctrl+j",
+    "command": "selectNextSuggestion",
+    "when": "suggestWidgetVisible"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "selectPrevSuggestion",
+    "when": "suggestWidgetVisible"
+  },
+  // cycle quick open files ctrl key does not work here so tab was used
+  {
+    "key": "tab",
+    "command": "workbench.action.quickOpenSelectNext",
+    "when": "inQuickOpen"
+  },
+  // namespace imports
+  {
+      "key": "ctrl+i",
+      "command": "namespaceResolver.import",
+      "when": "editorTextFocus"
+  },
+  {
+      "key": "ctrl+alt+i",
+      "command": "-namespaceResolver.import",
+      "when": "editorTextFocus"
+  },
+  // Toggle terminal
+  {
+    "key": "ctrl+t",
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "-workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active"
+  },
+  // split terminal
+  {
+    "key": "ctrl+shift+t",
+    "command": "workbench.action.terminal.split",
+    "when": "terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile"
+  },
+  {
+    "key": "ctrl+shift+5",
+    "command": "-workbench.action.terminal.split",
+    "when": "terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile"
+  },
+  // terminal focus
+  {
+    "key": "ctrl+tab",
+    "command": "workbench.action.terminal.focusPreviousPane",
+    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+  },
+
+]
