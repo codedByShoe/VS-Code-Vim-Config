@@ -1,4 +1,23 @@
-"vim.easymotion": true,
+{
+  "workbench.colorTheme": "Tokyo Night",
+  "workbench.iconTheme": "eq-material-theme-icons",
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.overviewRulerBorder": false,
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.vertical": "hidden",
+  "color-highlight.markRuler": false,
+  "workbench.tree.renderIndentGuides": "none",
+  "explorer.openEditors.visible": 3,
+  "explorer.decorations.colors": false,
+  "editor.cursorBlinking": "phase",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "window.menuBarVisibility": "toggle",
+  "workbench.layoutControl.enabled": false,
+  "window.title": " ",
+  "vscode_custom_css.imports": [
+    "file:///C:/Users/Andrew/Documents/vscode/vscode-powerline/powerline.css",
+    "file:///c:/Users/Andrew/.vscode/extensions/brandonkirbyson.vscode-animations-1.0.14/dist/updateHandler.js"
+  ],
   "vim.sneak": true,
   "vim.incsearch": true,
   "vim.useSystemClipboard": true,
@@ -7,6 +26,14 @@
     {
       "before": ["j", "k"],
       "after": ["<Esc>"]
+    },
+    {
+      "before": [";", ";"],
+      "after": ["<Esc>", "A", ";", "<Esc>"]
+    },
+    {
+      "before": [",", ","],
+      "after": ["<Esc>", "A", ",", "<Esc>"]
     }
   ],
   "vim.leader": "<space>",
@@ -28,38 +55,215 @@
       "commands": ["workbench.action.closeActiveEditor"]
     },
     {
-    "before": ["<leader>", "e"],
-    "commands": ["workbench.action.toggleSidebarVisibility"]
-    },
-    {
-      "before": [":"],
-      "commands": ["workbench.action.showCommands"]
+      "before": ["<leader>", "e"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
     },
     {
       "before": ["<leader>", "/"],
       "commands": ["editor.action.commentLine"],
       "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+      "before": ["K"],
+      "commands": ["editor.action.showDefinitionPreviewHover"]
+    },
+    {
+      "before": ["<leader>", "n", "f"],
+      "commands": ["extension.advancedNewFile"]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
-    "before": [">"],
-    "commands": ["editor.action.indentLines"]
+      "before": [">"],
+      "commands": ["editor.action.indentLines"]
     },
     {
-    "before": ["<"],
-    "commands": ["editor.action.outdentLines"]
+      "before": ["<"],
+      "commands": ["editor.action.outdentLines"]
     },
     {
       "before": ["<leader>", "/"],
       "commands": ["editor.action.commentLine"],
       "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+      "before": ["p"],
+      "after": ["\"", "_", "d", "P"]
+ 
     }
-],
-"editor.fontSize": 18,
-"editor.lineNumbers": "relative",
-"editor.lineHeight": 1.7,
-"editor.fontFamily": "'Fira Code'",
-"editor.fontLigatures": true,
-"editor.minimap.enabled": false,
-"editor.cursorSurroundingLines": 20
+  ],
+  "editor.fontSize": 18,
+  "editor.lineNumbers": "relative",
+  "editor.lineHeight": 1.9,
+  "editor.fontFamily": "'VictorMono Nerd Font'",
+  "editor.fontLigatures": true,
+  "editor.minimap.enabled": false,
+  "editor.cursorSurroundingLines": 20,
+  "wakatime.apiKey": "waka_bdbf1d84-9b59-40f2-bd1c-e04df11e679a",
+  "intelephense.stubs": [
+    "apache",
+    "bcmath",
+    "bz2",
+    "calendar",
+    "com_dotnet",
+    "Core",
+    "ctype",
+    "curl",
+    "date",
+    "dba",
+    "dom",
+    "enchant",
+    "exif",
+    "FFI",
+    "fileinfo",
+    "filter",
+    "fpm",
+    "ftp",
+    "gd",
+    "gettext",
+    "gmp",
+    "hash",
+    "iconv",
+    "imap",
+    "intl",
+    "json",
+    "ldap",
+    "libxml",
+    "mbstring",
+    "meta",
+    "mysqli",
+    "oci8",
+    "odbc",
+    "openssl",
+    "pcntl",
+    "pcre",
+    "PDO",
+    "pdo_ibm",
+    "pdo_mysql",
+    "pdo_pgsql",
+    "pdo_sqlite",
+    "pgsql",
+    "Phar",
+    "posix",
+    "pspell",
+    "random",
+    "readline",
+    "Reflection",
+    "session",
+    "shmop",
+    "SimpleXML",
+    "snmp",
+    "soap",
+    "sockets",
+    "sodium",
+    "SPL",
+    "sqlite3",
+    "standard",
+    "superglobals",
+    "sysvmsg",
+    "sysvsem",
+    "sysvshm",
+    "tidy",
+    "tokenizer",
+    "xml",
+    "xmlreader",
+    "xmlrpc",
+    "xmlwriter",
+    "xsl",
+    "Zend OPcache",
+    "zip",
+    "zlib",
+    "wordpress"
+  ],
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.startupEditor": "none",
+  "[blade]": {
+    "editor.defaultFormatter": "shufo.vscode-blade-formatter"
+  },
+  "tabnine.experimentalAutoImports": true,
+  "settingsSync.ignoredExtensions": [
+    "ms-mssql.sql-bindings-vscode",
+    "ms-mssql.data-workspace-vscode",
+    "asvetliakov.vscode-neovim",
+    "ms-mssql.mssql",
+    "visualstudioexptteam.intellicode-api-usage-examples"
+  ],
+  "bracket-pair-colorizer-2.depreciation-notice": false,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "git.openRepositoryInParentFolders": "never",
+  "yaml.customTags": [
+    "!And",
+    "!And sequence",
+    "!If",
+    "!If sequence",
+    "!Not",
+    "!Not sequence",
+    "!Equals",
+    "!Equals sequence",
+    "!Or",
+    "!Or sequence",
+    "!FindInMap",
+    "!FindInMap sequence",
+    "!Base64",
+    "!Join",
+    "!Join sequence",
+    "!Cidr",
+    "!Ref",
+    "!Sub",
+    "!Sub sequence",
+    "!GetAtt",
+    "!GetAZs",
+    "!ImportValue",
+    "!ImportValue sequence",
+    "!Select",
+    "!Select sequence",
+    "!Split",
+    "!Split sequence"
+  ],
+  "animations.Enabled": true,
+  "editor.formatOnSave": true,
+  "javascript.format.semicolons": "insert",
+  "[astro]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "explorer.confirmDragAndDrop": false,
+  "files.associations": {
+    "*.html": "twig"
+  },
+  "liveSassCompile.settings.generateMap": false,
+  "emmet.includeLanguages": {
+    "twig": "html"
+  },
+  "workbench.activityBar.visible": false,
+  "css.lint.unknownAtRules": "ignore",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "breadcrumbs.enabled": false,
+  "workbench.settings.editor": "json",
+  "tailwindCSS.colorDecorators": false,
+  "tailwind-fold.autoFold": true,
+  "tailwind-fold.supportedLanguages": [
+   "blade", 
+    "html",
+    "typescriptreact",
+    "javascriptreact",
+    "typescript",
+    "javascript",
+    "vue-html",
+    "vue",
+    "php",
+    "markdown",
+    "coffeescript",
+    "svelte",
+    "astro"
+  ],
+  "tailwind-fold.showTailwindImage": false
+}
