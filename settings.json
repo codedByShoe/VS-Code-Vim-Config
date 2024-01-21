@@ -1,4 +1,21 @@
 {
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Gruvbox Material Dark",
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.overviewRulerBorder": false,
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.vertical": "hidden",
+  "workbench.tree.renderIndentGuides": "none",
+  "explorer.openEditors.visible": 3,
+  "explorer.decorations.colors": false,
+  "editor.cursorBlinking": "phase",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "window.menuBarVisibility": "toggle",
+  "workbench.layoutControl.enabled": false,
+  "window.title": "VsVim",
+  "vscode_custom_css.imports": [
+    "file:///home/ashoe/.config/VSCodium/powerline/vscode-powerline/powerline.css"
+  ],
   "vim.sneak": true,
   "vim.incsearch": true,
   "vim.useSystemClipboard": true,
@@ -51,6 +68,26 @@
     {
       "before": ["<leader>", "n", "f"],
       "commands": ["extension.advancedNewFile"]
+    },
+    {
+      "before": ["<leader>", "h", "a"],
+      "commands": ["vscode-harpoon.addEditor"]
+    },
+    {
+      "before": ["<leader>", "h", "e"],
+      "commands": ["vscode-harpoon.editEditors"]
+    },
+    {
+      "before": ["<leader>", "p", "e"],
+      "commands": ["vscode-harpoon.editorQuickPick"]
+    },
+    {
+      "before": ["<leader>", "1"],
+      "commands": ["vscode-harpoon.gotoEditor1"]
+    },
+    {
+      "before": ["<leader>", "2"],
+      "commands": ["vscode-harpoon.gotoEditor2"]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
@@ -70,7 +107,169 @@
     {
       "before": ["p"],
       "after": ["\"", "_", "d", "P"]
- 
     }
-  ]
+  ],
+  "editor.fontSize": 18,
+  "editor.lineNumbers": "relative",
+  "editor.lineHeight": 1.9,
+  "editor.fontFamily": "'VictorMono Nerd Font'",
+  "editor.fontLigatures": true,
+  "editor.minimap.enabled": false,
+  "editor.cursorSurroundingLines": 20,
+  "wakatime.apiKey": "waka_bdbf1d84-9b59-40f2-bd1c-e04df11e679a",
+  "intelephense.stubs": [
+    "apache",
+    "bcmath",
+    "bz2",
+    "calendar",
+    "com_dotnet",
+    "Core",
+    "ctype",
+    "curl",
+    "date",
+    "dba",
+    "dom",
+    "enchant",
+    "exif",
+    "FFI",
+    "fileinfo",
+    "filter",
+    "fpm",
+    "ftp",
+    "gd",
+    "gettext",
+    "gmp",
+    "hash",
+    "iconv",
+    "imap",
+    "intl",
+    "json",
+    "ldap",
+    "libxml",
+    "mbstring",
+    "meta",
+    "mysqli",
+    "oci8",
+    "odbc",
+    "openssl",
+    "pcntl",
+    "pcre",
+    "PDO",
+    "pdo_ibm",
+    "pdo_mysql",
+    "pdo_pgsql",
+    "pdo_sqlite",
+    "pgsql",
+    "Phar",
+    "posix",
+    "pspell",
+    "random",
+    "readline",
+    "Reflection",
+    "session",
+    "shmop",
+    "SimpleXML",
+    "snmp",
+    "soap",
+    "sockets",
+    "sodium",
+    "SPL",
+    "sqlite3",
+    "standard",
+    "superglobals",
+    "sysvmsg",
+    "sysvsem",
+    "sysvshm",
+    "tidy",
+    "tokenizer",
+    "xml",
+    "xmlreader",
+    "xmlrpc",
+    "xmlwriter",
+    "xsl",
+    "Zend OPcache",
+    "zip",
+    "zlib",
+    "wordpress"
+  ],
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.startupEditor": "none",
+  "[blade]": {
+    "editor.defaultFormatter": "shufo.vscode-blade-formatter"
+  },
+  "bracket-pair-colorizer-2.depreciation-notice": false,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "git.openRepositoryInParentFolders": "never",
+  "yaml.customTags": [
+    "!And",
+    "!And sequence",
+    "!If",
+    "!If sequence",
+    "!Not",
+    "!Not sequence",
+    "!Equals",
+    "!Equals sequence",
+    "!Or",
+    "!Or sequence",
+    "!FindInMap",
+    "!FindInMap sequence",
+    "!Base64",
+    "!Join",
+    "!Join sequence",
+    "!Cidr",
+    "!Ref",
+    "!Sub",
+    "!Sub sequence",
+    "!GetAtt",
+    "!GetAZs",
+    "!ImportValue",
+    "!ImportValue sequence",
+    "!Select",
+    "!Select sequence",
+    "!Split",
+    "!Split sequence"
+  ],
+  "animations.Enabled": true,
+  "editor.formatOnSave": true,
+  "javascript.format.semicolons": "insert",
+  "[astro]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "explorer.confirmDragAndDrop": false,
+  "files.associations": {
+    "*.html": "html"
+  },
+  "emmet.includeLanguages": {
+    "twig": "html"
+  },
+  "css.lint.unknownAtRules": "ignore",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "breadcrumbs.enabled": false,
+  "workbench.settings.editor": "json",
+  "tailwindCSS.colorDecorators": false,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "workbench.activityBar.location": "hidden",
+  "[php]": {
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+  },
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "editor.linkedEditing": true,
+  "[liquid]": {
+    "editor.defaultFormatter": "sissel.shopify-liquid"
+  },
+  "git.confirmSync": false,
+  "workbench.statusBar.visible": false,
+  "workbench.editor.showTabs": "single",
 }
+
