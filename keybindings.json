@@ -7,7 +7,7 @@
   },
   {
       "key": "ctrl+l",
-      "command": "workbench.action.navigateRight"
+      "command": "workbench.action.navigateRight",
   },
   {
       "key": "ctrl+k",
@@ -95,12 +95,12 @@
   },
   // code suggestion navigation
   {
-    "key": "ctrl+j",
+    "key": "tab",
     "command": "selectNextSuggestion",
     "when": "suggestWidgetVisible"
   },
   {
-    "key": "ctrl+k",
+    "key": "shift+tab",
     "command": "selectPrevSuggestion",
     "when": "suggestWidgetVisible"
   },
@@ -149,5 +149,9 @@
     "command": "workbench.action.terminal.focusPreviousPane",
     "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
   },
-
+    {
+      "key": "ctrl+p",
+      "command": "-extension.vim_ctrl+p",
+      "when": "editorTextFocus && vim.active && vim.use<C-p> && !inDebugRepl || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'CommandlineInProgress' || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'SearchInProgressMode'"
+    }
 ]
