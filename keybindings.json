@@ -2,37 +2,37 @@
 [
   // navigate to different splits, terminal, file explorer. etc.. whatever is open
   {
-      "key": "ctrl+h",
-      "command": "workbench.action.navigateLeft"
+    "key": "ctrl+h",
+    "command": "workbench.action.navigateLeft"
   },
   {
-      "key": "ctrl+l",
-      "command": "workbench.action.navigateRight",
+    "key": "ctrl+l",
+    "command": "workbench.action.navigateRight"
   },
   {
-      "key": "ctrl+k",
-      "command": "workbench.action.navigateUp"
+    "key": "ctrl+k",
+    "command": "workbench.action.navigateUp"
   },
   {
-      "key": "ctrl+j",
-      "command": "workbench.action.navigateDown"
+    "key": "ctrl+j",
+    "command": "workbench.action.navigateDown"
   },
-  { 
+  {
     "key": "h",
     "command": "list.collapse",
     "when": "listFocus && !inputFocus"
   },
-  { 
+  {
     "key": "l",
     "command": "list.expand",
     "when": "listFocus && !inputFocus"
   },
-  { 
+  {
     "key": "k",
     "command": "list.focusUp",
     "when": "listFocus && !inputFocus"
   },
-  { 
+  {
     "key": "j",
     "command": "list.focusDown",
     "when": "listFocus && !inputFocus"
@@ -95,37 +95,52 @@
   },
   // code suggestion navigation
   {
-    "key": "tab",
+    "key": "ctrl+n",
     "command": "selectNextSuggestion",
     "when": "suggestWidgetVisible"
   },
   {
-    "key": "shift+tab",
+    "key": "ctrl+p",
     "command": "selectPrevSuggestion",
+    "when": "suggestWidgetVisible"
+  },
+  {
+    "key": "ctrl+y",
+    "command": "acceptSelectedSuggestion",
     "when": "suggestWidgetVisible"
   },
   // cycle quick open files ctrl key does not work here so tab was used
   {
-    "key": "tab",
+    "key": "ctrl+n",
     "command": "workbench.action.quickOpenSelectNext",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "workbench.action.quickOpenSelectPrevious",
     "when": "inQuickOpen"
   },
   // namespace imports
   {
-      "key": "ctrl+i",
-      "command": "namespaceResolver.import",
-      "when": "editorTextFocus"
+    "key": "ctrl+i",
+    "command": "namespaceResolver.import",
+    "when": "editorTextFocus"
   },
   {
-      "key": "ctrl+alt+i",
-      "command": "-namespaceResolver.import",
-      "when": "editorTextFocus"
+    "key": "ctrl+alt+i",
+    "command": "-namespaceResolver.import",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "space+n+i",
+    "command": "nuget.gallery.view.focus",
+    "when": "editorTextFocus"
   },
   // Toggle terminal
   {
-    "key": "ctrl+t",
+    "key": "escape",
     "command": "workbench.action.terminal.toggleTerminal",
-    "when": "terminal.active"
+    "when": "terminalFocus"
   },
   {
     "key": "ctrl+`",
@@ -143,15 +158,24 @@
     "command": "-workbench.action.terminal.split",
     "when": "terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile"
   },
-  // terminal focus
   {
     "key": "ctrl+tab",
     "command": "workbench.action.terminal.focusPreviousPane",
     "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
   },
-    {
-      "key": "ctrl+p",
-      "command": "-extension.vim_ctrl+p",
-      "when": "editorTextFocus && vim.active && vim.use<C-p> && !inDebugRepl || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'CommandlineInProgress' || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'SearchInProgressMode'"
-    }
+  {
+    "key": "ctrl+p",
+    "command": "-extension.vim_ctrl+p",
+    "when": "editorTextFocus && vim.active && vim.use<C-p> && !inDebugRepl || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'CommandlineInProgress' || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'SearchInProgressMode'"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+  },
+  {
+    "key": "ctrl+pagedown",
+    "command": "-workbench.action.terminal.focusNext",
+    "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+  }
 ]
